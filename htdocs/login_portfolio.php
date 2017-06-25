@@ -1,0 +1,185 @@
+﻿<?
+include"session.php";
+?>
+
+<!DOCTYPE html>
+<!-- saved from url=(0071)file:///C:/Users/kwangwon%20oh/Desktop/bootstrap-3.3.7-dist/index.html# -->
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <script src="./index_files/jquery.min.js.다운로드"></script>
+    <script src="./index_files/bootstrap.min.js.다운로드"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cormorant+SC');
+        @import url('https://fonts.googleapis.com/css?family=Rouge+Script');
+
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 50%;
+            height: 100%;
+            margin: auto;
+        }
+
+        div.container {
+            background-color: white;
+        }
+
+        div.mytalk {
+            padding: 10px;
+            margin: 20px;
+        }
+
+        div.end {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        li.menu {
+            font-weight: bold;
+            font-size: 20px;
+            color: gray;
+        }
+
+        a {
+            color: gray;
+        }
+
+        p.my {
+            font-size: 40px;
+            font-family: 'Rouge Script', cursive;
+        }
+
+        h1.header {
+            font-family: 'Cormorant SC', serif;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        article {
+            margin-left: 170px;
+            border-left: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+        }
+
+        body {
+            position: relative;
+        }
+
+        ul.nav-pills {
+            top: 210px;
+            position: fixed;
+        }
+
+
+        @media screen and (max-width: 810px) {
+            #section1, #section2, #section21, #section22, #section3 {
+                margin-left: 100px;
+            }
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+    <div class="container">
+        <h1 class="header" style="text-align:center">Kwangwon Home</h1>
+        <div>
+            <?php 
+            session_start();
+            echo $_SESSION['ses_username'].'님 어서오세요!<p/>';                  
+            echo '<a href="./index.html">로그아웃 하기</a>'; 
+            ?>
+        </div>
+        <div>
+            <nav class="navbar navbar-inverse">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="menu"><a href="./login_index.php">Main</a></li>
+                    <li class="menu"><a href="./login_introduction.php">Introduction</a></li>
+                    <li class="menu"><a href="./login_career.php">Career</a></li>
+                    <li class="menu"><a href="./login_portfolio.php">Portfolio</a></li>
+                    <li class="menu"><a href="./login_more.php">More</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="row">
+            <nav class="col-sm-3" id="myScrollspy">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#section1">포트폴리오란?</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">포트폴리오의 필요성<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#section21">자기 점검, 자기 관리</a></li>
+                            <li><a href="#section22">삶의 목표, 진료방향 찾기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#section3">발췌</a></li>
+                </ul>
+            </nav>
+            <div class="col-sm-9">
+                <div class="panel panel-success" id="section1">
+                    <div class="panel-heading">포트폴리오란?</div>
+                    <div class="panel-body">
+                        "교육 분야에서의 포트폴리오는 대개 학습자들이 무엇을 알고 수행할 수 있는지를 표현하고 이를 평가받기 위해 체계적으로 수집된 다양한 자료들의 모임을 말한다. 구체적으로 기술하자면, 포트폴리오는 시간의 경과에 따른 학습자의 학습과정, 목표, 노력, 태도, 교육 활동, 성과물 등을 의도적으로 모아둔 것으로, 이를 통하여 교육 목표 달성 정도를 확인하고 교수-학습 개선에 필요한 반성과 조언 등 학습 과정 및 결과를 관리하는 기능을 포함하고 있다." (한국교육개발원, 2010)
+                        <br>
+                        <br>
+                        요약하면 포트폴리오는 “평가를 위해 그 사람의 활동을 체계적으로 기록하고 정리한 자료집"입니다. 즉 좋은 포트폴리오를 만들려면 “체계적으로”, “목표/활동내용/노력한 정도/성취”를 “기록해서 모으는 것”이 기본임을 잊지 말아야 합니다.
+                    </div>
+
+                </div>
+                <hr>
+                <br>
+                <div class="panel panel-info" id="section2">
+                    <div class="panel-heading">포트폴리오의 필요성</div>
+                </div>
+                <div class="panel panel-info" id="section21">
+                    <div class="panel-heading">자기 점검, 자기 관리</div>
+                    <div class="panel-body">
+                        체계적으로 기록된 활동모음집을 만들 수 있다면 개인의 입장에서는 자신의 진로방향과 목표에 맞춰 얼마나 준비를 잘해왔는지 점검도 하고 그동안 이뤄낸 활동들이 얼마나 자신의 목표에 부합하고 도움이 되었는지를 확인할 수 있습니다. 물론 아직까지 부족하다싶다면 다시 의지를 충전해서 포트폴리오에 더 나은 활동들을 기록해갈 수 있죠. 잠깐!! 자기 진로방향을 찾지 못한 학생은 포트폴리오를 만들 수 없는 걸까요?!! 절대 그렇지 않습니다.
+                        여기서 포트폴리오가 왜 필요한지, 두 번째 이유가 나오네요.
+                    </div>
+                </div>
+                <div class="panel panel-info" id="section22">
+                    <div class="panel-heading">삶의 목표, 진로방향 찾기</div>
+                    <div class="panel-body">
+                        아까 포트폴리오는 그동안 해온 활동들을 모아놓은 자료집이라고 했었죠.
+                        진로방향이 명확하지 않아도 기록을 시작해보세요.
+                        <br>
+                        그 다음에 기록집을 쭈욱 읽어가면서 자신이 누구인지를 고민하는 겁니다.
+                        <br>
+                        분명히 기록들에는 본인이 무엇을 주로 해왔는지, 무엇을 좋아하는지, 어디서 가장 큰 기쁨과 깨달음을 얻었는지가 드러나 있을 겁니다. 포트폴리오를 만들면서 자신의 목표를 세우는 거죠.
+                        그렇게 진로 목표를 세웠다면 다시 그 목표에 맞춰 활동을 해나가는 겁니다.
+                        <br>
+                        나중에 이 포트폴리오가 정말 그 학생에게 유용하게 쓰이기 위해서는 진로목표를 세우고, 다시금 그 목표에 맞춰 스스로를 개발해나가는 것으로 이어져야 합니다. 포트폴리오가 무엇이고, 왜 필요한지 감이 오시나요?
+                        이 포스팅에서 캐치하셔야 할 건
+
+                        <br>
+                        "활동을 기록하면서"
+                        <br>
+                        "진로방향을 찾고"
+                        <br>
+                        "다시 그 방향에 맞춰"
+                        <br>
+                        "활동을 기록하는"
+                        <br>
+                        "자료집"입니다.
+                        <br>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <div class="panel panel-warning" id="section3">
+                    <div class="panel-heading">발췌</div>
+                    <div class="panel-body">
+                        http://openknowl.tistory.com/24
+                    </div>
+                </div>
+                <hr>
+                <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

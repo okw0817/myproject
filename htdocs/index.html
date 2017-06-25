@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0071)file:///C:/Users/kwangwon%20oh/Desktop/bootstrap-3.3.7-dist/index.html# -->
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <script src="./index_files/jquery.min.js.다운로드"></script>
+    <script src="./index_files/bootstrap.min.js.다운로드"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cormorant+SC');
+        @import url('https://fonts.googleapis.com/css?family=Rouge+Script');
+
+        .affix {
+            top: 0;
+            width: 60%;
+        }
+
+            .affix + .container {
+                padding-top: 70px;
+            }
+
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 50%;
+            height: 100%;
+            margin: auto;
+        }
+
+        div.container {
+            background-color: white;
+        }
+
+        div.mytalk {
+            padding: 10px;
+            margin: 20px;
+        }
+
+        div.end {
+            padding: 5px;
+            margin: 5px;
+        }
+
+        li.menu {
+            font-weight: bold;
+            font-size: 20px;
+            color: gray;
+        }
+
+        a {
+            color: gray;
+        }
+
+        p.my {
+            font-size: 40px;
+            font-family: 'Rouge Script', cursive;
+        }
+
+        h1.header {
+            font-family: 'Cormorant SC', serif;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        article {
+            margin-left: 170px;
+            border-left: 1px solid gray;
+            padding: 1em;
+            overflow: hidden;
+        }
+
+        ul.nav-pills {
+            top: 20px;
+            position: fixed;
+        }
+
+        div.col-sm-9 div {
+            height: 250px;
+            font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header" style="text-align:center">Kwangwon Home</h1>
+        <div>
+        <form action="login_index.php" method="POST">
+            <table border ="1">
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text" size="30" name="id"></td>
+                </tr>
+                    <td>비밀번호</td>
+                    <td><input type="password" size="30" name="pwd"></td>
+                </tr>
+            </table>
+                    <!--
+            <p><label>아이디</label><input type="text" name="id" /></p>
+            <p><label>비밀번호</label><input type="text" name="pwd" /></p>
+            -->
+            <input type="submit" value="로그인"/>
+            <input type="button" name ="버튼" value="회원가입" onclick="location.href='http://localhost/signup.php'";>
+        </form>
+        </div>
+        <div>
+            <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="menu"><a href="./index.html">Main</a></li>
+                    <li class="menu"><a href="./introduction.html">Introduction</a></li>
+                    <li class="menu"><a href="./career.html">Career</a></li>
+                    <li class="menu"><a href="./portfolio.html">Portfolio</a></li>
+                    <li class="menu"><a href="./more.html">More</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item">
+                    <img src="./index_files/game1-1.jpg" class="img-rounded" alt="Chania" width="460" height="258">
+                    <div class="carousel-caption">
+                        <h3>시한부 용사</h3>
+                        <p>메인화면</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./index_files/game2-2.jpg" class="img-rounded" alt="Chania" width="460" height="258">
+                    <div class="carousel-caption">
+                        <h3>시한부 용사</h3>
+                        <p>프롤로그 화면</p>
+                    </div>
+                </div>
+                <div class="item active">
+                    <img src="./index_files/005.jpg" class="img-rounded" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>벚꽃 사진</h3>
+                        <p>그냥 넣은 사진</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./index_files/006.jpg" class="img-rounded" alt="Flower" width="460" height="345">
+                    <div class="carousel-caption">
+                        <h3>기린</h3>
+                        <p>그냥 넣은 사진</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <div class="mytalk">
+            <p class="my" style="text-align:center">To Sin By Silence When We Should Protest</p>
+            <p class="my" style="text-align:center">Protest Makes Cowards Out Of Men</p>
+        </div>
+        <div class="end" style="text-align:center">
+            <p style="color:black">©2017 Kwangwon Home. Tell:010-4928-8612 Email: okw0817@gmail.com </p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            // Activate Carousel
+            $("#myCarousel").carousel();
+
+            // Enable Carousel Indicators
+            $(".item1").click(function () {
+                $("#myCarousel").carousel(0);
+            });
+            $(".item2").click(function () {
+                $("#myCarousel").carousel(1);
+            });
+            $(".item3").click(function () {
+                $("#myCarousel").carousel(2);
+            });
+            $(".item4").click(function () {
+                $("#myCarousel").carousel(3);
+            });
+
+            // Enable Carousel Controls
+            $(".left").click(function () {
+                $("#myCarousel").carousel("prev");
+            });
+            $(".right").click(function () {
+                $("#myCarousel").carousel("next");
+            });
+        });
+    </script>
+
+</body>
+</html>
