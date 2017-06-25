@@ -1,0 +1,1 @@
+member는 mysql 데이터베이스이고 htdcs는 홈페이지 소스들입니다.
